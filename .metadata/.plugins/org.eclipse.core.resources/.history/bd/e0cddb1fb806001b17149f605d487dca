@@ -1,0 +1,5 @@
+package ar.edu.ucc.arqsoft.test.service.common.dto;
+
+public class ModelDtoConver {
+
+}

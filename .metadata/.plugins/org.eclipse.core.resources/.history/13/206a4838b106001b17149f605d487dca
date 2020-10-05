@@ -1,0 +1,16 @@
+package ar.edu.ucc.arqsoft.test.service.dao;
+
+import java.util.List;
+
+import ar.edu.ucc.arqsoft.test.service.baseServices.model.Cliente;
+
+public interface ClienteDao {
+
+		public Cliente FindById(Long id);
+		
+		public void register(Cliente cliente);
+		
+		public void update (Cliente cliente);
+		
+		public List<Cliente> FindByName (String nombre);
+}

@@ -1,0 +1,16 @@
+package ar.edu.ucc.arqsoft.test.service.dao;
+
+import java.util.List;
+
+import ar.edu.ucc.arqsoft.test.service.baseServices.model.Servicio;
+
+public interface ServiceDao {
+
+	public Servicio findById(Long id);
+	
+	public void register(Servicio servicio);
+	
+	public void update (Servicio servicio);
+	
+	public List<Servicio> FindByName (String nombre);
+}

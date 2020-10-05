@@ -1,0 +1,17 @@
+package ar.edu.ucc.arqsoft.test.service.baseService.dao;
+
+import java.util.List;
+
+import ar.edu.ucc.arqsoft.test.service.baseService.model.Factura;
+
+public interface FacturaDao {
+
+	public Factura findById(Long id);
+	
+	public void register(Factura factura);
+	
+	public void update (Factura factura);
+	
+	public List<Factura> FindByName (String nombre);//que nombre seria ?
+	
+}

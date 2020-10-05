@@ -1,0 +1,16 @@
+package ar.edu.ucc.arqsoft.test.service.baseService.dao;
+
+import java.util.List;
+
+import ar.edu.ucc.arqsoft.test.service.model.Detalle;
+
+public interface DetalleDao {
+	
+	public Detalle FindById(Long Id);
+	
+	public void register(Detalle detalle);
+	
+	public void update (Detalle detalle);
+	
+	public List<Detalle> FindByName (String nombre);
+}

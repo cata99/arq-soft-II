@@ -1,0 +1,16 @@
+package ar.edu.ucc.arqsoft.test.service.dao;
+
+import java.util.List;
+
+import ar.edu.ucc.arqsoft.test.service.baseServices.model.Pago;
+
+public interface PagoDao {
+
+	public Pago findById(Long id);
+	
+	public void register(Pago pago);
+	
+	public void update (Pago pago);
+	
+	public List<Pago> FindByName (String nombre); //no seria servicio o total?
+}

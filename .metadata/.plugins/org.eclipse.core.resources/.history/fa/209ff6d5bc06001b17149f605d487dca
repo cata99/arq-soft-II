@@ -1,0 +1,18 @@
+package ar.edu.ucc.arqsoft.test.service.baseServices.dao;
+
+import java.util.List;
+
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
+
+import org.springframework.stereotype.Repository;
+
+import ar.edu.ucc.arqsoft.test.service.baseServices.model.Servicio;
+import ar.edu.ucc.arqsoft.test.service.common.dao.genericDaoImp;
+
+@Repository
+public class ServiceDaoImp extends genericDaoImp<Servicio, Long> implements ServiceDao{
+ 
+	
+}

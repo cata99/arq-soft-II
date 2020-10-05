@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="javax.persistence.FetchType"/>
+    <fullyQualifiedTypeName name="ar.edu.ucc.arqsoft.test.service.model.Cliente"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="ar.edu.ucc.arqsoft.test.service.model.Detalle"/>
+    <fullyQualifiedTypeName name="ar.edu.ucc.arqsoft.test.service.common.dao.genericDao"/>
+    <fullyQualifiedTypeName name="ar.edu.ucc.arqsoft.test.service.common.dao.genericDaoImp"/>
+    <fullyQualifiedTypeName name="ar.edu.ucc.arqsoft.test.service.baseServices.model.Cliente"/>
+    <fullyQualifiedTypeName name="ar.edu.ucc.arqsoft.test.service.baseService.model.Usuario"/>
+    <fullyQualifiedTypeName name="ar.edu.ucc.arqsoft.test.service.baseService.model.Producto"/>
+</qualifiedTypeNameHistroy>

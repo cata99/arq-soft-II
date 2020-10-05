@@ -1,0 +1,6 @@
+package ar.edu.ucc.arqsoft.test.service.baseServices.dao;
+
+public class ServiceDaoImp {
+ 
+	
+}
