@@ -20,7 +20,7 @@ public class ClienteDapImp extends genericDaoImp<Cliente, Long> implements Clien
         CriteriaQuery<Cliente> criteria = builder.createQuery(Cliente.class);
         Root<Cliente> entity = criteria.from(Cliente.class);
 
-        criteria.select(entity).where(builder.equal(entity.get("name"), nombre));
+        criteria.select(entity).where(builder.equal(entity.get("name"+" "+"lastname"), nombre));
         return em.createQuery(criteria).getResultList();
 	}
 }

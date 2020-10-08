@@ -10,7 +10,7 @@ import javax.persistence.JoinColumn; //preguntar al profe
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+
 
 
 @Entity
@@ -30,7 +30,7 @@ public class Pago {
 	
 	@ManyToOne(fetch= FetchType.LAZY)
 	@JoinColumn(name="SERVICIO_ID")
-	private Servicio service; // preguntar la relacion 
+	private Servicio service; 
 	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn( name = "CLIENTE_ID")

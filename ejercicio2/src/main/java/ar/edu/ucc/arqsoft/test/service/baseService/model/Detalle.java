@@ -4,7 +4,9 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import javax.persistence.ManyToOne;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
 
 import ar.edu.ucc.arqsoft.test.service.common.model.GenericObject;
 
@@ -12,6 +14,9 @@ import ar.edu.ucc.arqsoft.test.service.common.model.GenericObject;
 @Table(name= "DETALLE")
 public class Detalle extends GenericObject {
 
+	@NotNull
+	@JoinColumn(name="PRODUCTO_ID")
+	@ManyToOne (fetch= FetchType.LAZY)
 	private Producto producto; //aca seria one to one?
 	
 	@NotNull

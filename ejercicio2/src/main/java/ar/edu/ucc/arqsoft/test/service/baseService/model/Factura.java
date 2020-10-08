@@ -9,9 +9,10 @@ import javax.persistence.Enumerated;
 import javax.persistence.FetchType; // preguntar al profe
 import javax.persistence.JoinColumn; //preguntar al profe
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+
 
 import ar.edu.ucc.arqsoft.test.service.common.model.GenericObject;
 
@@ -19,8 +20,8 @@ import ar.edu.ucc.arqsoft.test.service.common.model.GenericObject;
 @Table (name= "FACTURA")
 public class Factura extends GenericObject{
 	
-	@ManyToOne (fetch =FetchType.LAZY)
-	@Column (name ="USUARIO")
+	@ManyToOne (fetch =FetchType.LAZY) // NO SERIA ONE TO MANY?
+	@JoinColumn(name="USUARIO_ID")
 	private Usuario usuario;
 	
 	@NotNull
@@ -39,7 +40,7 @@ public class Factura extends GenericObject{
 	@Column(name="FACTURA_STATE")
 	private FacturaState facturaState;
 	
-//	@OnetoMany (targetEntity =) //no se como sigue
+	@OneToMany (targetEntity =Detalle.class) 
 	private Set<Detalle> detalle;
 	
 	public FacturaState getFacturaState() {

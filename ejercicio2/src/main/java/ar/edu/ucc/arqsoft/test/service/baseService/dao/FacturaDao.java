@@ -7,6 +7,6 @@ import ar.edu.ucc.arqsoft.test.service.common.dao.genericDao;
 
 public interface FacturaDao extends genericDao<Factura, Long>{
 	
-	public List<Factura> FindByName (String nombre);//que nombre seria ?
+	public List<Factura> FindByNumber (String number);
 	
 }

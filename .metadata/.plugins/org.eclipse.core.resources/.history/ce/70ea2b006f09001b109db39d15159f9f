@@ -1,0 +1,79 @@
+package ar.edu.ucc.arqsoft.test.service.baseServices.model;
+
+import java.util.Date;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.FetchType; // preguntar al profe
+import javax.persistence.JoinColumn; //preguntar al profe
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+
+
+
+@Entity
+@Table(name = "PAGO")
+public class Pago {
+	
+	@NotNull
+	@Column (name= "TOTAL")
+	private Long total;
+	
+	@Enumerated (value= EnumType.STRING)
+	@Column(name = "STATE") //puedo hacer la enumeracion not null o de por si ya son not null?
+	private ServiceState state;
+	
+	@Column(name= "FECHA")
+	private Date date;
+	
+	@ManyToOne(fetch= FetchType.LAZY)
+	@JoinColumn(name="SERVICIO_ID")
+	private Servicio service; // preguntar la relacion 
+	
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn( name = "CLIENTE_ID")
+	private Cliente cliente;
+
+	public Servicio getService() {
+		return service;
+	}
+
+	public void setService(Servicio service) {
+		this.service = service;
+	}
+
+	public Long getTotal() {
+		return total;
+	}
+
+	public void setTotal(Long total) {
+		this.total = total;
+	}
+
+	public ServiceState getState() {
+		return state;
+	}
+
+	public void setState(ServiceState state) {
+		this.state = state;
+	}
+
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
+	public Cliente getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	} 
+	
+}

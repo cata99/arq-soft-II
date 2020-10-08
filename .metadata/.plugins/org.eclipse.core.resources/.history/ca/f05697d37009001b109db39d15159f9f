@@ -1,0 +1,31 @@
+package ar.edu.ucc.arqsoft.test.service.baseServices.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import ar.edu.ucc.arqsoft.test.service.baseServices.dao.*;
+import ar.edu.ucc.arqSoft.test.service.baseService.dto.ClienteResponseDto;
+import ar.edu.ucc.arqSoft.test.service.baseService.dto.ClienteRequestDto;
+import ar.edu.ucc.arqSoft.test.service.baseService.model.Cliente;
+import ar.edu.ucc.arqsoft.test.service.common.dto.*;
+
+@Service
+@Transactional
+
+public class ClienteService {
+	
+	@Autowired
+	private ClienteDao clienteDao
+
+	public ClienteResponseDto GetByName(String name)
+	
+	public ClienteResponseDto GetById(Long id)
+	
+	public ClienteResponseDto GetAllClientes()
+	
+	public ClienteResponseDto InsertarCliente (ClienteRequestDto request)
+}

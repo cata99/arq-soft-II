@@ -1,0 +1,50 @@
+package ar.edu.ucc.arqsoft.test.service.baseService.model;
+
+import java.util.Set;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+import ar.edu.ucc.arqsoft.test.service.common.model.GenericObject;
+
+@Entity
+@Table(name="USER")
+public class Usuario extends GenericObject{
+
+	@NotNull
+	@Size(min=1, max=250)
+	@Column (name="NAME")
+	private String name;
+	
+	@NotNull
+	@Size(min=1, max=250)
+	@Column (name="LAST_NAME")
+	private String lastName;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public Set<Factura> getFactura() {
+		return factura;
+	}
+
+	public void setFactura(Set<Factura> factura) {
+		this.factura = factura;
+	}
+	
+}

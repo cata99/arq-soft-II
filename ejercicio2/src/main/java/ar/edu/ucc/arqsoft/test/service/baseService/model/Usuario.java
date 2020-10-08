@@ -3,9 +3,6 @@ package ar.edu.ucc.arqsoft.test.service.baseService.model;
 import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType; // preguntar al profe
-import javax.persistence.JoinColumn; //preguntar al profe
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
@@ -27,7 +24,7 @@ public class Usuario extends GenericObject{
 	@Column (name="LAST_NAME")
 	private String lastName;
 	
-//	@OneToMany(targetENtity)//no se como sigue
+	@OneToMany(targetEntity=Factura.class)
 	private Set<Factura> factura;
 
 

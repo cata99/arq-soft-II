@@ -1,0 +1,47 @@
+package ar.edu.ucc.arqsoft.test.service.baseServices.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import ar.edu.ucc.arqsoft.test.service.baseServices.dao.*;
+import ar.edu.ucc.arqsoft.test.service.baseServices.dto.*;
+import ar.edu.ucc.arqsoft.test.service.baseServices.model.Servicio;
+import ar.edu.ucc.arqsoft.test.service.common.dto.*;
+
+@Service
+@Transactional
+
+public class ServicioState {
+	
+	@Autowired
+	private ServiceDao serviceDao; 
+	
+	public ServiceResponseDto GetById (Long id) {
+		Servicio service = serviceDao.load(id);
+		
+		ServiceResponseDto response = (ServiceResponseDto) new ModelDtoConverter().convertToDto(service, new ServiceResponseDto());
+		return response;
+	}
+	
+	
+	public ServiceResponseDto GetAllService() {
+		List<Servicio> services = serviceDao.getAll();
+		
+		List<ServiceResponseDto> response= new ArrayList<ServiceResponseDto>();
+		
+		for(Servicio service: services) {
+			response.add((ServiceResponseDto) new ModelDtoConverter().convertToDto(service, new ServiceResponseDto()));
+		}
+			
+		
+		return response;
+	}
+	
+	public ServiceRequestDto InsertarService (ServiceRequestDto request) {
+		
+	}
+}

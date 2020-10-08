@@ -1,0 +1,22 @@
+package ar.edu.ucc.arqsoft.test.service.baseServices.service
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import ar.edu.ucc.arqsoft.test.service.baseServices.dao.*;
+//import ar.edu.ucc.arqSoft.test.service.baseService.dto.StateRequestDto;
+//import ar.edu.ucc.arqSoft.test.service.baseService.dto.StateResponseDto;
+//import ar.edu.ucc.arqSoft.test.service.baseService.model.State;
+import ar.edu.ucc.arqsoft.test.service.common.dto.*;
+
+@Service
+@Transactional
+
+public class ServicioState {
+	
+	private ServiceDao serviceDao; 
+}

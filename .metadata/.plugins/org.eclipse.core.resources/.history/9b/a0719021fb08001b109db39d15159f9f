@@ -1,0 +1,13 @@
+package ar.edu.ucc.arqsoft.test.service.baseServices.dao;
+
+import org.springframework.stereotype.Repository;
+
+import ar.edu.ucc.arqsoft.test.service.baseServices.model.Pago;
+import ar.edu.ucc.arqsoft.test.service.common.dao.genericDaoImp;
+
+@Repository
+public class PagoDaoImp  extends genericDaoImp<Pago, Long> implements PagoDao{
+
+	
+	
+}
